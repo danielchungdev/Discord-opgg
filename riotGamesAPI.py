@@ -1,6 +1,17 @@
+"""
+Project: Discordgg.py
+File: riotGamesAPI.py
+Author: Daniel Chung
+Date: 9/02/19
+Description: This file contains all the functions that are
+related to the Riot Games API mostly using GET requests.
+Installs: request
+"""
+
 import requests
 from functions import *
 
+riotApiKey = "RGAPI-a2df110b-81c3-49cc-85fb-80553838885d"
 
 """
 Param: summonerName (from user input)
