@@ -11,7 +11,7 @@ Installs: request
 import requests
 from functions import *
 
-riotApiKey = "RGAPI-a2df110b-81c3-49cc-85fb-80553838885d"
+riotApiKey = "RGAPI-0d344b20-9b3e-47bb-a991-37cc0eeccf49"
 
 """
 Param: summonerName (from user input)

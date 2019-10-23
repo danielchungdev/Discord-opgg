@@ -27,17 +27,19 @@ Main method checks if the user's message has the keyletter "!"
 if it has then it proceeds to check for the summonername and 
 retrieve information.
 """
-
 @client.event
 async def on_message(message):
     if message.content[0] == "!":
         region = getRegion(message.content)
-        summonerName = getSummonerName(message.content)
-        summonerID = getSummonerID(summonerName, region)
-        if summonerID == False:
-            await message.channel.send("```diff\n - Summoner name: " + summonerName + " was not found\n```")
+        if region == "help":
+            await message.channel.send(helpCommand())
         else:
-            #print(getSummonerRank(summonerID, summonerName, region))
-            await message.channel.send(getSummonerRank(summonerID, summonerName, region))
+            summonerName = getSummonerName(message.content)
+            summonerID = getSummonerID(summonerName, region)
+            if summonerID == False:
+                await message.channel.send("```diff\n - Summoner name: " + summonerName + " was not found\n```")
+            else:
+                #print(getSummonerRank(summonerID, summonerName, region))
+                await message.channel.send(getSummonerRank(summonerID, summonerName, region))
 
 client.run(discordToken)

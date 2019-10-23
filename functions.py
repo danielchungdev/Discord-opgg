@@ -57,8 +57,15 @@ looked at.
 def getRegion(message):
     region = message.split(" ")[0][1:].lower()
     dictionary = {"ru" : "ru", "kr" : "kr", "br" : "br1", "oce" : "oc1", "jp" : "jp1", "na" : "na1", "eune" : "eun1",
-                  "euw" : "euw1", "tr" : "tr1", "lan" : "la1", "las" : "la2"}
+                  "euw" : "euw1", "tr" : "tr1", "lan" : "la1", "las" : "la2", "help" : "help"}
     return dictionary[region]
+
+def helpCommand():
+    helpInstructions = "**Use: ![REGION] [SummonerName] [Command]** \n" \
+            "**Commands:** \n" \
+            "**' '** *(Summoner Information)* \n" \
+            "**'-g'** *(Live Game Information)* \n"
+    return helpInstructions
 
 def test_getWinRatio():
     print("** TESTING getWinRatio(wins, loses) **")
