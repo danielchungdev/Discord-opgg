@@ -32,13 +32,12 @@ retrieve information.
 async def on_message(message):
     if message.content[0] == "!":
         region = getRegion(message.content)
-        print(region)
         summonerName = getSummonerName(message.content)
-        summonerID = getSummonerID(summonerName)
+        summonerID = getSummonerID(summonerName, region)
         if summonerID == False:
-            await message.channel.send("Summoner name: " + summonerName + " was not found")
+            await message.channel.send("```diff\n - Summoner name: " + summonerName + " was not found\n```")
         else:
-            print(getSummonerRank(summonerID, summonerName))
-            await message.channel.send(getSummonerRank(summonerID, summonerName))
+            #print(getSummonerRank(summonerID, summonerName, region))
+            await message.channel.send(getSummonerRank(summonerID, summonerName, region))
 
 client.run(discordToken)

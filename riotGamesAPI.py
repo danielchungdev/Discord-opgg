@@ -21,8 +21,9 @@ this is used for future use. Here also happens the check for error
 error handling.
 Return: (boolean) if Error, (str) summonerID 
 """
-def getSummonerID(summonerName):
-    URL = "https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + riotApiKey
+def getSummonerID(summonerName, region):
+    URL = "https://" + region + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + riotApiKey
+    print(URL)
     response = requests.get(url=URL)
     data = response.json()
     if len(data) == 1:
@@ -40,19 +41,25 @@ method of the application. It will format and return the
 rank information of the summoner name to be displayed. 
 Returns: (str) User's ranked information or No ranked games.  
 """
-def getSummonerRank(summonerID, summoner):
-    URL = "https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + summonerID + "?api_key=" + riotApiKey
+def getSummonerRank(summonerID, summoner, region):
+    URL = "https://" + region +".api.riotgames.com/lol/league/v4/entries/by-summoner/" + summonerID + "?api_key=" + riotApiKey
+    print(URL)
     response = requests.get(url=URL)
     data = response.json()
     index = getQueueType(data)
-    if index != False:
+    print("index: " + str(index))
+    if index != 4:
         tier = data[index]['tier']
+        print(tier)
         rank = data[index]['rank']
+        print(rank)
         wins = data[index]['wins']
         losses = data[index]['losses']
         lp = str(data[index]['leaguePoints'])
         winRatio = getWinRatio(wins, losses)
-        fullRank = summoner.capitalize() + "\n" +tier + " " + rank + " " + lp + "lp\nW/L: " + str(wins) +"/"+ str(losses) + " WR:" + str(winRatio) + "%"
+
+        fullRank = "```fix\n" + summoner.capitalize() + "\n" +tier + " " + rank + " " + lp + "lp\n" + str(wins) +"/"+ str(losses) + "\n" + str(winRatio) + "% \n```"
         return fullRank
     else:
+        print("im in else")
         return "Summoner has no Ranked games"
