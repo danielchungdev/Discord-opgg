@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78ba3af4-0fc2-49b4-9000-ea65b11870e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/discordgg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riotGamesAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/riotGamesAPI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
