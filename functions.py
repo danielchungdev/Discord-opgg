@@ -2,7 +2,7 @@
 Project: Discordgg.py
 File: functions.py
 Author: Daniel Chung
-Date: 9/02/19
+Date: 02/9/19
 Description: This file contains all the functions that are
 general to only python code.
 Installs: ---
@@ -53,6 +53,7 @@ def getWinRatio(wins, losses):
 Params: message.content
 This functions returns the server in which the search is going to be 
 looked at.
+Returns: Dictionary of regions.
 """
 def getRegion(message):
     region = message.split(" ")[0][1:].lower()
@@ -60,6 +61,12 @@ def getRegion(message):
                   "euw" : "euw1", "tr" : "tr1", "lan" : "la1", "las" : "la2", "help" : "help"}
     return dictionary[region]
 
+
+"""
+Params: --
+This functions returns how to use the bot and the commands you can use.
+Returns: Dictionary of regions.
+"""
 def helpCommand():
     helpInstructions = "**Use: ![REGION] [SummonerName] [Command]** \n" \
             "**Commands:** \n" \
@@ -76,6 +83,9 @@ def test_getWinRatio():
     print(fifty == 50)
     print(zero == 0)
 
+"""
+Testing function to test if the cross server works.
+"""
 def test_getRegion():
     print("** TESTING getRegion(message) **")
     test1 = "!na pikachung"

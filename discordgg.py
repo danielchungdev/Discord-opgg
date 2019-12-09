@@ -2,7 +2,7 @@
 Project: Discordgg.py
 File: discordgg.py
 Author: Daniel Chung
-Date: 9/02/19
+Date: 02/9/19
 Description: This file contains the main functions that are based
 on the bot. This file is basically the MAIN. Run this file for bot
 to work on the servers.
@@ -11,11 +11,10 @@ Installs: discord.py
 
 import discord
 from riotGamesAPI import *
-from functions import *
 
 #CHANGE DISCORD TOKEN EVERYTIME
 client = discord.Client()
-discordToken = "NjE4ODM2MDE0OTQ5MjAzOTg3.Xa6qKg.F8wzyGOIrnAWvw2yCYDBDS2WY38"
+discordToken = API_Keys.discord_key_api()
 
 @client.event
 async def on_ready():
