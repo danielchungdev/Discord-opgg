@@ -1,7 +1,7 @@
 """
 Project: Discordgg.py
 File: discordgg.py
-Author: Daniel Chung
+Author: @Daniel Chung
 Date: 02/9/19
 Description: This file contains the main functions that are based
 on the bot. This file is basically the MAIN. Run this file for bot

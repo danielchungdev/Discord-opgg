@@ -1,7 +1,7 @@
 """
 Project: Discordgg.py
 File: riotGamesAPI.py
-Author: Daniel Chung
+Author: @Daniel Chung
 Date: 02/9/19
 Description: This file contains all the functions that are
 related to the Riot Games API mostly using GET requests.
