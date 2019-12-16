@@ -1,7 +1,7 @@
 """
 Project: Discordgg.py
 File: discordgg.py
-Author: @Daniel Chung
+Author: Daniel Chung
 Date: 02/9/19
 Description: This file contains the main functions that are based
 on the bot. This file is basically the MAIN. Run this file for bot
@@ -14,7 +14,7 @@ from riotGamesAPI import *
 
 #CHANGE DISCORD TOKEN EVERYTIME
 client = discord.Client()
-discordToken = API_Keys.discord_key_api()
+discordToken = "NjE4ODM2MDE0OTQ5MjAzOTg3.XfAp-Q.IMRzVNYlCLaZk5KEqVXkHemQc8w"
 
 @client.event
 async def on_ready():

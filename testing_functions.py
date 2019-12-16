@@ -32,3 +32,10 @@ def test_getRegion():
     print(getRegion(test2) == "euw1")
     print(getRegion(test3) == "la1")
     print(getRegion(test4) == "la2")
+
+def main():
+    test_getWinRatio()
+    test_getRegion()
+
+if __name__ == '__main__':
+    main()

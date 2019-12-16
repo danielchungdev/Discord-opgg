@@ -7,11 +7,11 @@ Description: This file contains all the functions that are
 related to the Riot Games API mostly using GET requests.
 Installs: request
 """
-import API_Keys
+
 import requests
 from functions import *
 
-riotApiKey = API_Keys.riot_games_api()
+riotApiKey = "RGAPI-7b2ce81b-db2b-4041-838f-c1f80a300701"
 
 """
 Param: summonerName (from user input)
